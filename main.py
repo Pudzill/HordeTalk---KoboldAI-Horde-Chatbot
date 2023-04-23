@@ -36,23 +36,12 @@ async def main():
     print(Fore.GREEN + "  retry   - Remove the last User and Assistant messages, allowing you to enter new text.")
     print(Fore.GREEN + "  prompt  - Print the current prompt being sent to the AI")
     print(Fore.GREEN + "  exit    - Exit the chat\n")
-    
-    print(Fore.BLUE + Style.BRIGHT + "How HordeTalk works:")
-    print(Fore.BLUE + "HordeTalk is an AI chat assistant that utilizes an external service called AI Horde. AI Horde provides an API with a distributed cluster of text generation workers. When you send a prompt through HordeTalk, it forwards your prompt to AI Horde, which then selects a group of trusted users to contribute to generating the response.\n")
-    print(Fore.BLUE + "Our service automatically attempts to find the fastest model for your convenience, ensuring that the generated responses are delivered as quickly as possible. However, due to the nature of distributed processing and varying workloads, timeouts and delays might still occur occasionally.\n")
-    
+
     print(Fore.RED + Style.BRIGHT + "Reminder: AI-generated content may not always be accurate or reliable. Please approach the information with a critical mindset and verify the content's validity before relying on it. Remember to use the AI responsibly and ethically.\n")
-
-    print(Fore.YELLOW + "Enter your first message to the AI:\n")
-
 
     while True:
         print(Fore.YELLOW + "User: ", end="")
         user_text = input().strip()
-
-        if not pf.is_clean(user_text):
-            print(Fore.RED + "Please avoid using profanity. Try rephrasing your input.")
-            continue
 
         if user_text.lower() == '':
             print(Fore.RED + "Error: You must enter some text. Please try again.")
