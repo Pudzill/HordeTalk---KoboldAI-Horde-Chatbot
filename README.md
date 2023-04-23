@@ -1,4 +1,4 @@
-<h1 align="center">HordeTalk---KoboldAI-Horde-Chatbot</h1>
+<h1 align="center">HordeTalk - KoboldAI Horde Chatbot</h1>
 <h3 align="center">Terminal chatbot. Powered by KoboldAI Horde.</h3>
 
 <p align="center">Parameters changeable in <code>main.py</code>:</p>
